@@ -10,11 +10,11 @@ class sampledemo{
     System.out.println("Accessing this method outside of the class");
   }
  
- /* public void display()
+ public void display()
   {
 	System.out.println("Accessing the public method"); 
   }
- */
+ 
  // it also works for the public methods
 
   private void prints()
@@ -40,16 +40,13 @@ class demoaccesspvt
 	sampledemo obj=new sampledemo();
 
 	//to search for class "A" and the method "displayPvt"
-	Method m=sampledemo.class.getDeclaredMethod("prints");
+	Method m=sampledemo.class.getDeclaredMethod("displayPvt");
 
 	//to bypass java access control checks
 	m.setAccessible(true);
 
 	//calls the private method "diplayPvt" on object obj
 	m.invoke(obj);
-
-	
-
- 
       }
+
  }
