@@ -3,7 +3,7 @@ class call
      public void callme(String msg)
 	{
            
-	   synchronized(this)
+	   synchronized(this) // synchronized block
            {	
                 System.out.print("[");
 	  	System.out.print(msg);
@@ -35,7 +35,7 @@ class caller extends Thread
  
     public void run()
 	{
-	  /*synchronized(obj){
+	  /*synchronized(obj){ // synchronized block
 		obj.callme(str);
 		}*/
 	  obj.callme(str);
@@ -47,10 +47,9 @@ class demosyncblock
     public static void main(String asd[]) throws Exception 
 	{
 	   call obj=new call();
-    	   caller c1=new caller(obj,"one");
+       caller c1=new caller(obj,"one");
 	   caller c2=new caller(obj,"two");
-	   caller c3=new caller(obj,"three");
- 
-	 
+	   caller c3=new caller(obj,"three"); 
    	}
+
   }
