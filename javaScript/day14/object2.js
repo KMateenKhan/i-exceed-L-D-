@@ -57,7 +57,7 @@ console.log(map);
 //Object.freeze() 
 //makes existing properties non-writable and non-configurable
 
-//Object.freeze(teams); // it throws error only in strict mode but in not strict mode it does not throws error but does not allow to change the value
+//Object.freeze(teams); // it throws error only in strict mode but in no strict mode it does not throws error but does not allow to change the value
 teams.aston="Lance";
 console.log(teams);
 
